@@ -52,3 +52,8 @@
     - Presenter : Presenter와 View에 대한 interface를 구현
     - PresenterImpl : Presenter를 상속받아서 구현
     - View : Presenter.View를 상속받아서 구현
+</br>
+
+- Adapter Contract
+
+![mvp_adapter contract](https://user-images.githubusercontent.com/44170716/90950929-275cb780-e491-11ea-8256-0159d2289ef7.PNG)
