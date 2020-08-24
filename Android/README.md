@@ -57,3 +57,9 @@
 - Adapter Contract
 
 ![mvp_adapter contract](https://user-images.githubusercontent.com/44170716/90950929-275cb780-e491-11ea-8256-0159d2289ef7.PNG)
+
+- Google Architecture의 Model
+  - Repository : Remote/Local을 구분하며, memory cache를 포함
+  - Remote : 서버를 통한 데이터를 불러옴
+  - Local : 단말기 상의 SQL, Realm 등을 통한 데이터를 불러옴
+![mvp_model](https://user-images.githubusercontent.com/44170716/91030724-90cbfa00-e63a-11ea-9f75-7e9199ffb2ae.PNG)
