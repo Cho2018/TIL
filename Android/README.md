@@ -26,11 +26,11 @@ Model과 View의 의존성이 높음 => 하나의 모듈을 수정할 때, 그 �
 <a name="mvp"></a>
 ## MVP
 - Model, View, Presenter의 약자
-  - Model : Data와 관련된 처리를 담당
+  - Model(= MVC 패턴의 Model) : Data와 관련된 처리를 담당
     - Data의 전반적인 부분을 Model에서 담당하고 네트워크, 로컬 데이터 등을 포함
-  - View : 사용자의 실질적인 이벤트가 발생하고, 이를 처리 담당자인 Presenter로 전달
-    - 완전한 View의 형태를 가지도록 설계. 계산을 하거나 데이터를 가져오는 등의 행위는 Presenter에서 처리하도록 함
-  - Presenter : View에서 전달받은 이벤트를 처리하고, 이를 다시 View에 전달
+  - View(= MVC 패턴의 View) : 사용자의 실질적인 이벤트가 발생하고, 이를 처리 담당자인 Presenter로 전달
+    - 계산을 하거나 데이터를 가져오는 등의 행위는 Presenter에서 처리하도록 함
+  - Presenter : View에서 전달받은 이벤트를 처리하고, 이를 다시 View에 전달 => View와 Model의 중재자 역할
     - View와는 무관한 Data등을 가지고, 이를 가공하고 View에 다시 전달하는 역할
 ![mvp](https://user-images.githubusercontent.com/44170716/90516283-bbcbcf00-e19e-11ea-9c1a-acfae3d81295.PNG)
 ```
@@ -69,3 +69,7 @@ Model과 View의 의존성이 높음 => 하나의 모듈을 수정할 때, 그 �
   - Remote : 서버를 통한 데이터를 불러옴
   - Local : 단말기 상의 SQL, Realm 등을 통한 데이터를 불러옴
 ![mvp_model](https://user-images.githubusercontent.com/44170716/91030724-90cbfa00-e63a-11ea-9f75-7e9199ffb2ae.PNG)
+</br>
+
+- 장점 : View와 Model간의 의존성이 없음. Presenter를 통해서만 데이터를 주고 받기 때문
+- 단점 : View와 Presenter의 의존성이 높음 => 프로젝트 규모 커질수록 유지보수나 리팩터링 힘듦
