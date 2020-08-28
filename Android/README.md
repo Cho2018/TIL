@@ -5,9 +5,13 @@
 <a name="mvc"></a>
 ## MVC
 - Model, View, Controller의 약자
-  - Model : 데이터를 가집니다.
-  - View : 사용자에 보일 화면을 표현합니다.
-  - Controller : 사용자로부터 입력을 받고, 이를 Model에 의해 View를 정의하게 됩니다.
+  - Model 
+    - 데이터를 가집니다. 
+    - Restful API를 호출하거나, 서버의 데이터베이스로부터 직접 데이터를 받아오거나, 처리하는 역할을 합니다.
+  - View : 사용자에 보일 화면을 표현합니다. 즉, 레이아웃
+  - Controller 
+    - (사용자로부터 입력을 받고, 이를 Model에 의해 View를 정의하게 됩니다.) 
+    - 사용자가 View에서 요청한 일종의 Action에 대한 로직을 처리하는 역할을 합니다.
 - Android에서는 Activity/Fragment 같은 View들이 View와 Controller 모두 가지고 있습니다.  
 ![MVC](https://user-images.githubusercontent.com/44170716/90515128-24b24780-e19d-11ea-8387-cad480e602b1.PNG)
 ```
@@ -16,6 +20,8 @@
 3. Model로부터 전달받은 데이터를 통해 View 갱신 여부 판단
 4. View에서 UI 갱신 처리
 ```
+- 단점</br>
+Model과 View의 의존성이 높음 => 하나의 모듈을 수정할 때, 그 모듈과 의존되어 있는 모든 모듈에 대한 수정 필요 => 프로젝트 규모 커질수록 유지보수 힘듦
 
 <a name="mvp"></a>
 ## MVP
